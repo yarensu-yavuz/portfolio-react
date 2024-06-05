@@ -26,7 +26,8 @@ export const Polaroid = styled.div`
 
   img {
     display: block;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
   }
 
   span {
@@ -64,18 +65,25 @@ export const Icons = styled.div`
 
 export const AboutSection = styled.div`
   margin: 2rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px solid black;
   padding: 1.5rem;
-  width: 40%;
+  width: 100%;
+  max-width: 600px;
   background: ${({ theme }) => theme.gradients.gradientthird};
+  transition: transform 0.2s, box-shadow 0.2s;
+
   &:hover {
     transform: scale(1.2);
     z-index: 10;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  }
+
   @media (max-width: ${({ theme }) => theme.responsive.medium}) {
-    width: calc(50% - 1rem);
+    width: 90%;
   }
 
   @media (max-width: ${({ theme }) => theme.responsive.small}) {
@@ -83,17 +91,22 @@ export const AboutSection = styled.div`
   }
 `;
 
-// export const AboutTitle = styled.h2`
-//   color: ${({ theme }) => theme.icons.default.color};
-// `;
-
 export const AboutParagraph = styled.p`
   font-size: 1.2rem;
   color: ${({ theme }) => theme.icons.default.color};
   line-height: 1.5;
   margin-bottom: 1rem;
-  margin-right: 2rem;
-  text-align: justify;
+  text-align: center;
+  
+
+  @media (max-width: ${({ theme }) => theme.responsive.medium}) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.responsive.small}) {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
 `;
 
 export const Gif = styled.img`
@@ -102,6 +115,9 @@ export const Gif = styled.img`
   position: absolute;
   bottom: 10px;
   right: 20px;
+  @media (max-width: ${({ theme }) => theme.responsive.medium}) {
+    right:70px
+  }
 `;
 
 export default StyledAbout;
