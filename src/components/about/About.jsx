@@ -6,7 +6,7 @@ import StyledAbout, {
   Polaroid,
   Gif,
 } from "./About.styled";
-import Flex from "../../style/FlexColumn.styled";
+import FlexColumn from "../../style/FlexColumn.styled";
 import FlexRow from "../../style/FlexRow.styled";
 import { TbCat } from "react-icons/tb";
 import { FaHeart } from "react-icons/fa";
@@ -18,15 +18,15 @@ const About = () => {
     <StyledAbout>
       <AnimatedTitle>Hakkımda</AnimatedTitle>
       <FlexRow>
-        <Flex>
+        <FlexColumn>
           <Polaroid>
             <img src={Foto} alt="Yaren Su" />
             <span>Yaren Su</span>
           </Polaroid>
-        </Flex>
+        </FlexColumn>
 
         <AboutSection>
-          <Flex>
+          <FlexColumn>
             <Icons>
               <FaHeart />
               <TbCat />
@@ -49,7 +49,7 @@ const About = () => {
               alıyorum. Ayrıca kedileri ve sanat tarihi hakkında okuma yapmayı
               seviyorum.
             </AboutParagraph>
-          </Flex>
+          </FlexColumn>
         </AboutSection>
       </FlexRow>
 

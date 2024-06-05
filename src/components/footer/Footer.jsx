@@ -3,7 +3,7 @@ import StyledFooter, { Gif, SocialLinks } from "./Footer.styled";
 import FlexRow from "../../style/FlexRow.styled";
 import AnimatedTitle from "../../style/AnimatedTitle.styled";
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
-import Flex from "../../style/FlexColumn.styled";
+import FlexColumn from "../../style/FlexColumn.styled";
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
           src="https://img1.picmix.com/output/stamp/normal/7/2/2/9/189227_120b7.gif"
           alt="Footer Gif"
         />
-        <Flex>
+        <FlexColumn>
           <AnimatedTitle>Bana Ulaşın!</AnimatedTitle>
           <SocialLinks>
             <a href="https://github.com/yarensu-yavuz" target="_blank">
@@ -29,7 +29,7 @@ const Footer = () => {
               <AiFillInstagram />
             </a>
           </SocialLinks>
-        </Flex>
+        </FlexColumn>
       </FlexRow>
     </StyledFooter>
   );

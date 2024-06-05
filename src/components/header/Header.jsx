@@ -9,7 +9,7 @@ import StyledHeader, {
 } from "./Header.styled";
 import Foto from "../../assets/computerpaw.png";
 import Container from "../../style/Container.styled";
-import Flex from "../../style/FlexColumn.styled";
+import FlexColumn from "../../style/FlexColumn.styled";
 import { FaRegFileLines } from "react-icons/fa6";
 
 const Header = () => {
@@ -40,7 +40,7 @@ const Header = () => {
         </svg>
       </GitHubCorner>
       <Container>
-        <Flex>
+        <FlexColumn>
           <Logo src={Foto} alt="Logo" />
           <TypingTitle>Yaren Su YAVUZ</TypingTitle>
           <Subtitle>Front-end Developer</Subtitle>
@@ -52,7 +52,7 @@ const Header = () => {
             <FaRegFileLines />
             CV
           </CVButton>
-        </Flex>
+        </FlexColumn>
       </Container>
     </StyledHeader>
   );

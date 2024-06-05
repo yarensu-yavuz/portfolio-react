@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Flex = styled.div`
+const FlexColumn = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -12,4 +12,4 @@ const Flex = styled.div`
   }
 `;
 
-export default Flex;
+export default FlexColumn;
